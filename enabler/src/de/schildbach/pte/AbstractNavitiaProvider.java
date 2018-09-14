@@ -92,7 +92,7 @@ public abstract class AbstractNavitiaProvider extends AbstractNetworkProvider {
     }
 
     private enum PhysicalMode {
-        AIR, BOAT, BUS, BUSRAPIDTRANSIT, COACH, FERRY, FUNICULAR, LOCALTRAIN, LONGDISTANCETRAIN, METRO, RAPIDTRANSIT, SHUTTLE, TAXI, TRAIN, TRAMWAY, TRAM, VAL, OTHER
+        AIR, BOAT, BUS, BUSRAPIDTRANSIT, COACH, FERRY, FUNICULAR, LOCALTRAIN, LONGDISTANCETRAIN, METRO, RAPIDTRANSIT, SHUTTLE, TAXI, TRAIN, TRAMWAY, TRAM, VAL, OTHER, NA
     }
 
     @SuppressWarnings("serial")
@@ -644,6 +644,7 @@ public abstract class AbstractNavitiaProvider extends AbstractNetworkProvider {
             return Product.ON_DEMAND;
         case OTHER:
             return null;
+        case NA:
         default:
             throw new IllegalArgumentException("Unhandled physical mode: " + modeId);
         }
