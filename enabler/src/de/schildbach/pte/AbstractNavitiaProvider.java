@@ -645,6 +645,7 @@ public abstract class AbstractNavitiaProvider extends AbstractNetworkProvider {
         case OTHER:
             return null;
         case NA:
+            return null;
         default:
             throw new IllegalArgumentException("Unhandled physical mode: " + modeId);
         }
